@@ -34,7 +34,7 @@ Configuration file is **main.tfvars**. All configurations are listed below.
 
 
 | Configuration     | Description                                 | Type   | Default Value |
-|:------------------|:--------------------------------------------|:------:|:-------------:|
+|:------------------|:--------------------------------------------|:------|:-------------|
 | credentials_file  | Google Cloud Service Account json file path | string | - |
 | project           | Google Cloud Project id                     | string | - |
 | nfs_server_machine_region | Google Compute Engine instance region | string | us-central1 |
@@ -52,7 +52,7 @@ Configuration file is **main.tfvars**. All configurations are listed below.
 ### GCP VM Images
 
 | Image Id | GCP Equivalent |
-|:-----|:----------------:|
+|:-----|:----------------|
 | debian_9 | debian-cloud/debian-9 |
 | debian_10 | debian-cloud/debian-10 |
 | ubuntu_1604 | ubuntu-os-cloud/ubuntu-1604-lts |
@@ -64,10 +64,10 @@ Configuration file is **main.tfvars**. All configurations are listed below.
 | ubuntu_1910 | ubuntu-os-cloud/ubuntu-1910 |
 | ubuntu_1910_minimal | ubuntu-os-cloud/ubuntu-minimal-1910 |
 
-### GCP Default Network Cidrs
+### GCP Default Network CIDRs
 
-| Region | Cidr |
-|:-------|:----:|
+| Region | CIDR |
+|:-------|:----|
 | us-central1 | 10.128.0.0/20 |
 | europe-west1 | 10.132.0.0/20 |
 | us-west1 | 10.138.0.0/20 |
@@ -83,7 +83,7 @@ Configuration file is **main.tfvars**. All configurations are listed below.
 ### GCP GCE Disk Types
 
 | Disk Type Id | GCP Equivalent |
-|:----|:--------------:|
+|:----|:--------------|
 | ssd | pd-ssd |
 | hdd | pd-standard |
 
