@@ -6,7 +6,7 @@ NFS Server installation on **Google Compute Engine** script written with **Terra
 
 Example **main.tfvars** file below:
 
-```dotenv
+```hcl
 credentials_file = "your_credentials.json"
 project = "example-project"
 
@@ -90,7 +90,7 @@ Configuration file is **main.tfvars**. All configurations are listed below.
 ### GCP Oauth Scopes
 
 | Oauth Scope Id | GCP Equivalent |
-|:---------------|:--------------:|
+|:---------------|:--------------|
 | monitoring | https://www.googleapis.com/auth/monitoring |
 | monitoring.read | https://www.googleapis.com/auth/monitoring.read |
 | monitoring.write | https://www.googleapis.com/auth/monitoring.write |
