@@ -13,7 +13,7 @@ Configuration file is **main.tfvars**. All configurations are listed below.
 
 
 | Configuration     | Description                                 | Type   | Default Value |
-|:-----------------:|:-------------------------------------------:|:------:|:-------------:|
+|:------------------|:--------------------------------------------|:------:|:-------------:|
 | credentials_file  | Google Cloud Service Account json file path | string | - |
 | project           | Google Cloud Project id                     | string | - |
 | nfs_server_machine_region | Google Compute Engine instance region | string | us-central1 |
