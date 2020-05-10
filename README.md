@@ -5,7 +5,7 @@ NFS Server installation on **Google Compute Engine** script written with **Terra
 ## Usage
 
     terraform init
-    terraform apply -var-file=main.tfvars
+    terraform apply -var-filemain.tfvars
     
 ## Configuration 
 
@@ -28,5 +28,60 @@ Configuration file is **main.tfvars**. All configurations are listed below.
 | nfs_server_sa_scopes | Google Compute Engine instance service account scopes | list | [] |
 | nfs_server_fileshare_name | NFS Server fileshare directory name | string | - | 
 
-### Boot Disk Images
+### GCP VM Images
 
+| Image Id | GCP Equivalent |
+|:-----|:----------------:|
+| debian_9 | debian-cloud/debian-9 |
+| debian_10 | debian-cloud/debian-10 |
+| ubuntu_1604 | ubuntu-os-cloud/ubuntu-1604-lts |
+| ubuntu_1604_minimal | ubuntu-os-cloud/ubuntu-minimal-1604-lts |
+| ubuntu_1804 | ubuntu-os-cloud/ubuntu-1804-lts |
+| ubuntu_1804_minimal | ubuntu-os-cloud/ubuntu-minimal-1804-lts |
+| ubuntu_1904 | ubuntu-os-cloud/ubuntu-1904 |
+| ubuntu_1904_minimal | ubuntu-os-cloud/ubuntu-minimal-1904 |
+| ubuntu_1910 | ubuntu-os-cloud/ubuntu-1910 |
+| ubuntu_1910_minimal | ubuntu-os-cloud/ubuntu-minimal-1910 |
+
+### GCP Default Network Cidrs
+
+| Region | Cidr |
+|:-------|:----:|
+| us-central1 | 10.128.0.0/20 |
+| europe-west1 | 10.132.0.0/20 |
+| us-west1 | 10.138.0.0/20 |
+| asia-east1 | 10.140.0.0/20 |
+| us-east1 | 10.142.0.0/20 |
+| asia-northeast1 | 10.146.0.0/20 |
+| asia-southeast1 | 10.148.0.0/20 |
+| us-east4 | 10.150.0.0/20 |
+| australia-southeast1 | 10.152.0.0/20 |
+| europe-west2 | 10.154.0.0/20 |
+| europe-west3 | 10.156.0.0/20 |
+
+### GCP GCE Disk Types
+
+| Disk Type Id | GCP Equivalent |
+|:----|:--------------:|
+| ssd | pd-ssd |
+| hdd | pd-standard |
+
+### GCP Oauth Scopes
+
+| Oauth Scope Id | GCP Equivalent |
+|:---------------|:--------------:|
+| monitoring | https://www.googleapis.com/auth/monitoring |
+| monitoring.read | https://www.googleapis.com/auth/monitoring.read |
+| monitoring.write | https://www.googleapis.com/auth/monitoring.write |
+| logging.admin | https://www.googleapis.com/auth/logging.admin |
+| logging.read | https://www.googleapis.com/auth/logging.read |
+| logging.write | https://www.googleapis.com/auth/logging.write |
+| cloud-platform | https://www.googleapis.com/auth/cloud-platform |
+| cloud-platform.readonly | https://www.googleapis.com/auth/cloud-platform.read-only |
+| compute | https://www.googleapis.com/auth/compute |
+| compute.read_only | https://www.googleapis.com/auth/compute.readonly |
+| devstorage.full_control | https://www.googleapis.com/auth/devstorage.full_control |
+| devstorage.read_only | https://www.googleapis.com/auth/devstorage.read_only |
+| devstorage.read_write | https://www.googleapis.com/auth/devstorage.read_write |
+| service.management | https://www.googleapis.com/auth/service.management |
+| service.management.readonly | https://www.googleapis.com/auth/service.management.readonly |
